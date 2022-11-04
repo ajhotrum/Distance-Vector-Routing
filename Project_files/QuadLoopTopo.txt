@@ -1,0 +1,23 @@
+# Single Loop Topology
+# Contains a single positive weight cycle, and a node with no outgoing links.
+# AA <--(2)--- BB ---(10)--> CC --(10)---> FF <---(5)---> GG
+# |            ^             ^             ^              ^
+# |            |             |             |              |
+#(-50)        (0)           (-1)          (10)          (50)
+# |            |             |             |              |
+# v            v             V             v              |
+# DD ---(1)--> EE --(10)---> JJ ---(2)---> HH ---(-1)---> II
+#
+# File Format:
+# Node, Neighbor, Weight, Neighbor, Weight  (repeat as needed)
+#
+AA,DD,-50
+BB,AA,2,CC,10,EE,0
+CC,FF,10,JJ,-1
+DD,EE,1
+EE,BB,0,JJ,10
+FF,GG,5,HH,10
+GG,FF,5
+HH,II,-1,FF,10
+II,GG,50
+JJ,HH,2,CC,-1

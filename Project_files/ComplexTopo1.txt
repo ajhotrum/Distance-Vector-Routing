@@ -1,0 +1,23 @@
+# Complex Topology
+# NOTE: Node names were chosen randomly and are not meant to indicate any explicit or implied preference.
+#
+#(-50)---ATT
+#  |    ^ |
+#  |   /  | 
+#  | (50) |
+#  v /    | 
+# UGA   (-8)    
+#  ^ \    |   
+#  | (50) |    
+#  |   \  |   
+#  |    v v         
+# (0)---GSAT-
+#        
+#
+# File Format:
+# Node, Neighbor, Weight, Neighbor, Weight  (repeat as needed)
+#
+ATT,UGA,-50,GSAT,-8
+GSAT,UGA,0
+UGA,ATT,50,GSAT,50
+
